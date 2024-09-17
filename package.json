@@ -1,0 +1,32 @@
+{
+  "name": "mastr-killer",
+  "version": "1.0.0",
+  "description": "magic string killer for any project. The solution for magic strings tied to objects like i18n, config paths or any string needed to access an object property in which we loose reference tracking, autocompletition and features tied to type definitions",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qmarquez/mastr-killer"
+  },
+  "keywords": [
+    "magic",
+    "string",
+    "magicstrings"
+  ],
+  "author": "digihood",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "@types/jest": "^29.5.13",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript-eslint": "^8.6.0"
+  }
+}
