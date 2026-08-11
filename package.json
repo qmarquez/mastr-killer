@@ -1,19 +1,29 @@
 {
   "name": "mastr-killer",
   "version": "1.0.0",
-  "description": "Magic string killer for any project. The solution for magic strings tied to objects like i18n, config paths or any string needed to access an object property in which we lose reference tracking, autocompletion and features tied to type definitions.",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "description": "Magic String Killer — turn object property paths into typed, refactor-safe dot-path strings. Kills magic strings for NestJS ConfigService, i18n keys, or any string used to reach an object property.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
   "files": [
-    "src",
-    "!src/index.spec.ts"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
-    "test": "jest"
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist",
+    "test": "jest",
+    "prepack": "npm run clean && npm run build",
+    "prepublishOnly": "npm test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/qmarquez/mastr-killer"
+    "url": "git+https://github.com/qmarquez/mastr-killer.git"
+  },
+  "homepage": "https://github.com/qmarquez/mastr-killer#readme",
+  "bugs": {
+    "url": "https://github.com/qmarquez/mastr-killer/issues"
   },
   "keywords": [
     "magic",
@@ -22,10 +32,14 @@
     "typescript",
     "proxy",
     "config",
-    "i18n"
+    "nestjs",
+    "configservice",
+    "i18n",
+    "type-safe",
+    "paths"
   ],
   "author": "digihood",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.10.0",
     "@types/jest": "^29.5.13",
@@ -36,6 +50,7 @@
     "prettier": "^3.3.3",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
     "typescript-eslint": "^8.6.0"
   }
 }
