@@ -1,8 +1,13 @@
 {
   "name": "mastr-killer",
   "version": "1.0.0",
-  "description": "magic string killer for any project. The solution for magic strings tied to objects like i18n, config paths or any string needed to access an object property in which we loose reference tracking, autocompletition and features tied to type definitions",
-  "main": "index.ts",
+  "description": "Magic string killer for any project. The solution for magic strings tied to objects like i18n, config paths or any string needed to access an object property in which we lose reference tracking, autocompletion and features tied to type definitions.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": [
+    "src",
+    "!src/index.spec.ts"
+  ],
   "scripts": {
     "test": "jest"
   },
@@ -13,7 +18,11 @@
   "keywords": [
     "magic",
     "string",
-    "magicstrings"
+    "magicstrings",
+    "typescript",
+    "proxy",
+    "config",
+    "i18n"
   ],
   "author": "digihood",
   "license": "ISC",
